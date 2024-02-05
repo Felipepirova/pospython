@@ -1,0 +1,19 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# 1 - Criar o DataFrame
+data = {'Nome': ['Pedro', 'Joel', 'Elisabete', 'Cristiane', 'Renato', 'Jeferson'],
+        'Idade': [24, 25, 23, 21, 22, 26],
+        'Altura': [1.70, 1.80, 1.60, 1.80, 1.71, 1.87]}
+
+df = pd.DataFrame(data)
+
+# 2 - Imprimir as informações do DataFrame
+print(df)
+
+# 3 - Imprimir um histograma da variável idade
+df['Idade'].plot(kind='hist', edgecolor='black', bins=10)
+plt.title('Histograma de Idade')
+plt.xlabel('Idade')
+plt.ylabel('Frequência')
+plt.show()
